@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1f2a22">
+  <meta name="description" content="Аренда просторного дома в Борисове с купелью, террасой и зоной для праздников. До 10 гостей с ночёвкой и до 20 гостей на мероприятии.">
+  <title>Дом на Южной — аренда дома в Борисове для отдыха и праздников</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header" id="header">
+    <a class="brand" href="#top" aria-label="Дом на Южной, на главную">
+      <img class="brand-logo" src="assets/logo-dom-na-yuzhnoy.png" alt="" width="56" height="56">
+      <span><b>Дом на Южной</b><small>Борисов, Беларусь</small></span>
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#about">О доме</a><a href="#gallery">Галерея</a><a href="#prices">Цены</a>
+      <a href="#offers">Акции</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a>
+    </nav>
+    <a class="button button-small header-cta" href="#contacts">Забронировать</a>
+    <button class="menu-button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="hero-image" src="assets/property/hero-collage.webp" alt="Дом на Южной, терраса и купель" fetchpriority="high">
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow light">Просторный дом в центре Борисова</p>
+        <h1>Дом на Южной</h1>
+        <p class="hero-copy">Уютный двухэтажный дом для семейного отдыха, встреч с друзьями и особенных событий.</p>
+        <div class="hero-actions">
+          <a class="button" href="#contacts">Забронировать дату</a>
+          <a class="button button-ghost" href="#prices">Узнать стоимость</a>
+        </div>
+      </div>
+      <div class="hero-facts glass">
+        <span><b>159 м²</b> площадь</span><span><b>10</b> гостей</span><span><b>4</b> комнаты</span>
+      </div>
+      <a class="scroll-cue" href="#about">Листайте вниз <i></i></a>
+    </section>
+
+    <section class="section intro" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Место для ваших историй</p>
+        <h2>Отдых, который<br>хочется повторить</h2>
+      </div>
+      <div class="intro-copy reveal">
+        <p>Дом на Южной — светлый двухэтажный дом площадью 159 м² на тихой улице в центре Борисова.</p>
+        <p>Внутри — просторная гостиная, оборудованная кухня, четыре спальни и две туалетные комнаты. Во дворе — терраса, купель на дровах и зона для приготовления еды на огне.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature reveal"><i>⌂</i><span>159 м² и 4 комнаты</span></article>
+        <article class="feature reveal"><i>◇</i><span>Стол до 12 человек</span></article>
+        <article class="feature reveal"><i>♨</i><span>Сауна</span></article>
+        <article class="feature reveal"><i>○</i><span>Купель</span></article>
+        <article class="feature reveal"><i>火</i><span>Мангал, тандыр и казан</span></article>
+        <article class="feature reveal"><i>Р</i><span>Парковка на 2 машины</span></article>
+        <article class="feature reveal"><i>✦</i><span>Терраса и зона отдыха</span></article>
+        <article class="feature reveal"><i>♡</i><span>Мероприятия до 20 гостей</span></article>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="gallery">
+      <div class="section-top reveal">
+        <div><p class="eyebrow light">Фото из @dom_na_yuzhnoy</p><h2>Галерея дома</h2></div>
+        <p>Дом, интерьер, купель и территория в живых фотографиях. Нажмите на снимок, чтобы открыть его в полном размере.</p>
+      </div>
+      <div class="gallery-tabs" role="tablist" aria-label="Категории галереи">
+        <button class="active" data-filter="featured" role="tab" aria-selected="true">Избранное</button>
+        <button data-filter="house" role="tab" aria-selected="false">Дом</button>
+        <button data-filter="interior" role="tab" aria-selected="false">Интерьер</button>
+        <button data-filter="banquet" role="tab" aria-selected="false">Банкет</button>
+        <button data-filter="hottub" role="tab" aria-selected="false">Купель</button>
+        <button data-filter="territory" role="tab" aria-selected="false">Территория</button>
+      </div>
+      <div class="gallery" id="gallery-grid"></div>
+      <div class="gallery-more">
+        <button class="button button-ghost" id="gallery-show-all" type="button">Смотреть все фотографии <span>24</span></button>
+      </div>
+    </section>
+
+    <section class="section prices" id="prices">
+      <div class="section-heading centered reveal"><p class="eyebrow">Планируйте отдых</p><h2>Стоимость и условия</h2><p>Стоимость зависит от даты, количества гостей и выбранного формата. Ниже собраны основные тарифы и условия без скрытых пунктов.</p></div>
+      <div class="price-grid">
+        <article class="price-card reveal">
+          <p class="price-day">Проживание</p><h3>Будние дни</h3>
+          <div class="price-value"><b>от 100 BYN</b><span>за сутки</span></div>
+          <p class="price-note">До 10 гостей с ночёвкой. Заезд после 14:00, выезд до 12:00.</p>
+        </article>
+        <article class="price-card reveal">
+          <p class="price-day">Проживание</p><h3>Выходные дни</h3>
+          <div class="price-value price-value-pending"><b>Уточняется</b><span>при бронировании</span></div>
+          <p class="price-note">Стоимость зависит от даты, сезона и количества гостей.</p>
+        </article>
+        <article class="price-card reveal">
+          <p class="price-day">Дополнительная услуга</p><h3>Купель</h3>
+          <div class="price-value price-value-pending"><b>Уточняется</b><span>при бронировании</span></div>
+          <p class="price-note">Горячая купель на дровах под открытым небом.</p>
+        </article>
+        <article class="price-card reveal">
+          <p class="price-day">Дополнительная услуга</p><h3>Баня</h3>
+          <div class="price-value price-value-pending"><b>Уточняется</b><span>при бронировании</span></div>
+          <p class="price-note">Условия использования и подготовка согласовываются заранее.</p>
+        </article>
+        <article class="price-card featured reveal">
+          <p class="price-day">Праздники и встречи</p><h3>Мероприятия</h3>
+          <div class="price-value price-value-pending"><b>Уточняется</b><span>при бронировании</span></div>
+          <p class="price-note">До 20 человек без ночёвки. Формат и продолжительность согласовываются.</p>
+        </article>
+        <article class="price-card reveal">
+          <p class="price-day">Условия оплаты</p><h3>Залог и аванс</h3>
+          <div class="price-value"><b>30% аванс</b><span>350 BYN залог</span></div>
+          <p class="price-note">Залог возвратный. Остаток стоимости оплачивается при заселении.</p>
+        </article>
+      </div>
+      <div class="center"><a class="button" href="#contacts">Уточнить свободные даты</a></div>
+    </section>
+
+    <section class="section offers" id="offers">
+      <div class="section-top reveal">
+        <div><p class="eyebrow">Больше впечатлений</p><h2>Акции и форматы отдыха</h2></div>
+        <p>Подтверждённые условия и идеи из официальных публикаций Дома на Южной.</p>
+      </div>
+      <div class="offer-grid">
+        <article class="offer-card offer-one reveal"><span class="offer-badge">−20%</span><div><p>Для спонтанных</p><h3>Срочное бронирование</h3><p>При бронировании за день до заезда или в день заезда действует скидка 20%.</p><small>Выберите ближайшую свободную дату и свяжитесь для подтверждения.</small><a href="#contacts">Воспользоваться →</a></div></article>
+        <article class="offer-card offer-two reveal"><span class="offer-badge">До 20</span><div><p>Ваш особенный день</p><h3>Праздник в своём стиле</h3><p>Пространство можно оформить и задекорировать под день рождения, семейную встречу или другую идею.</p><small>Формат и количество гостей согласовываются заранее.</small><a href="#contacts">Обсудить праздник →</a></div></article>
+        <article class="offer-card offer-three reveal"><span class="offer-badge">🐾</span><div><p>Отдых всей семьёй</p><h3>Можно с питомцами</h3><p>Дом принимает гостей с домашними животными после предварительного согласования с хозяином.</p><small>Сообщите о питомце до подтверждения бронирования.</small><a href="#contacts">Уточнить условия →</a></div></article>
+      </div>
+    </section>
+
+    <section class="section amenities">
+      <div class="section-heading centered reveal"><p class="eyebrow">Всё уже здесь</p><h2>Для комфортного отдыха</h2></div>
+      <div class="amenity-grid">
+        <div class="reveal"><i>♨</i><span>Сауна</span></div><div class="reveal"><i>◉</i><span>Купель на дровах</span></div>
+        <div class="reveal"><i>⌁</i><span>Бесплатный Wi-Fi</span></div><div class="reveal"><i>Р</i><span>Парковка на 2 авто</span></div>
+        <div class="reveal"><i>火</i><span>Мангал, тандыр, казан</span></div><div class="reveal"><i>⌂</i><span>Оборудованная кухня</span></div>
+        <div class="reveal"><i>◇</i><span>Стол до 12 гостей</span></div><div class="reveal"><i>☾</i><span>До 10 спальных мест</span></div>
+        <div class="reveal"><i>○</i><span>Посуда и техника</span></div><div class="reveal"><i>✦</i><span>Терраса для отдыха</span></div>
+      </div>
+    </section>
+
+    <section class="section services">
+      <div class="section-heading reveal"><p class="eyebrow">Дополните отдых</p><h2>Дополнительные услуги</h2></div>
+      <div class="service-grid">
+        <article class="service reveal"><img src="assets/property/hottub-day.webp" alt="Купель на дровах" loading="lazy"><div><span>01</span><h3>Купель</h3><p>Горячая купель на дровах под открытым небом — для спокойного отдыха в любое время года.</p><b>Стоимость по запросу</b></div></article>
+        <article class="service reveal"><img src="assets/property/grill.webp" alt="Зона приготовления еды" loading="lazy"><div><span>02</span><h3>Еда на огне</h3><p>Во дворе доступны мангал, тандыр, казан, решётки и шампуры.</p><b>Входит в удобства дома</b></div></article>
+        <article class="service reveal"><img src="assets/property/table-setting.webp" alt="Праздничный стол" loading="lazy"><div><span>03</span><h3>Мероприятия</h3><p>В гостиной можно накрыть праздничный стол до 12 человек, а досуг организовать для компании до 20 гостей.</p><b>Индивидуальный расчёт</b></div></article>
+      </div>
+    </section>
+
+    <section class="section reviews" id="reviews">
+      <div class="reviews-head reveal"><div><p class="eyebrow light">Отзывы на Яндекс Картах</p><h2>Тёплые слова<br>после отдыха</h2></div><div class="rating"><b>4,5</b><span>★★★★☆</span><small>6 оценок · 5 отзывов</small></div></div>
+      <div class="review-track">
+        <article class="review active"><span>★★★★★</span><p>Современный интерьер, удобная мебель, продуманное пространство, ухоженная территория и отличная зона для барбекю. Семья гостей вернулась повторно и забронировала новый отдых заранее.</p><footer><b>Артур Т.</b><small>Яндекс Карты · 23 июня 2025</small></footer></article>
+        <article class="review"><span>★★★★★</span><p>Гости отдельно отметили тёплый и комфортный дом, удобные кровати, оборудованную кухню и большие общие пространства в доме и на террасе.</p><footer><b>Вася П.</b><small>Яндекс Карты · 3 октября 2025</small></footer></article>
+        <article class="review"><span>★★★★★</span><p>Дом вживую оказался даже лучше, чем на фотографиях. В нём есть всё необходимое для проживания, включая посудомоечную машину, а атмосфера получила отдельную похвалу.</p><footer><b>Aleksandra</b><small>Яндекс Карты · 16 марта 2026</small></footer></article>
+      </div>
+      <div class="review-nav"><button id="review-prev" aria-label="Предыдущий отзыв">←</button><div class="review-dots"></div><button id="review-next" aria-label="Следующий отзыв">→</button></div>
+    </section>
+
+    <section class="section social">
+      <div class="section-heading centered reveal"><p class="eyebrow">Оставайтесь рядом</p><h2>Дом в социальных сетях</h2><p>Живые видео, оформление праздников, атмосфера купели и актуальные свободные даты.</p></div>
+      <div class="social-grid">
+        <a class="social-card instagram reveal" href="https://www.instagram.com/dom_na_yuzhnoy/" target="_blank" rel="noopener"><span>◎</span><div><small>Instagram</small><h3>@dom_na_yuzhnoy</h3><p>Фотографии, атмосфера и свежие новости</p></div><b>Подписаться ↗</b></a>
+        <a class="social-card tiktok reveal" href="https://www.tiktok.com/@dom_na_yuzhnoy?_r=1&_t=ZS-9752Wwkz9wi" target="_blank" rel="noopener"><span>♪</span><div><small>TikTok</small><h3>@dom_na_yuzhnoy</h3><p>Видео террасы, купели и праздников гостей</p></div><b>Смотреть ↗</b></a>
+      </div>
+      <div class="video-grid">
+        <a class="video-card reveal" href="https://www.tiktok.com/@dom_na_yuzhnoy/video/7580005261411257656" target="_blank" rel="noopener"><img src="assets/property/hottub-night.webp" alt="Купель зимой" loading="lazy"><span>Купель зимой</span><b>Смотреть видео ↗</b></a>
+        <a class="video-card reveal" href="https://www.tiktok.com/@dom_na_yuzhnoy/photo/7619273974903508242" target="_blank" rel="noopener"><img src="assets/property/birthday-table.webp" alt="Первый день рождения в Доме на Южной" loading="lazy"><span>Детский день рождения</span><b>Смотреть публикацию ↗</b></a>
+        <a class="video-card reveal" href="https://www.tiktok.com/@dom_na_yuzhnoy/video/7601215294383688968" target="_blank" rel="noopener"><img src="assets/property/terrace-sofa.webp" alt="Встреча подруг в Доме на Южной" loading="lazy"><span>Встреча с друзьями</span><b>Смотреть видео ↗</b></a>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <div class="section-heading reveal"><p class="eyebrow">Важно знать</p><h2>Частые вопросы</h2></div>
+      <div class="faq-list">
+        <details class="reveal"><summary>Сколько человек может разместиться?<i>+</i></summary><p>До 10 гостей с ночёвкой. Для мероприятий без ночёвки можно согласовать компанию до 20 человек.</p></details>
+        <details class="reveal"><summary>Есть ли сауна?<i>+</i></summary><p>Сауна указана среди особенностей объекта на Яндекс Картах. Условия использования уточняйте при бронировании.</p></details>
+        <details class="reveal"><summary>Есть ли купель?<i>+</i></summary><p>Да, на террасе установлена купель на дровах. Она арендуется за отдельную стоимость.</p></details>
+        <details class="reveal"><summary>Можно ли проводить мероприятия?<i>+</i></summary><p>Да. В гостиной можно накрыть стол до 12 человек, а мероприятие без ночёвки провести для компании до 20 гостей с 15:00 до 00:00.</p></details>
+        <details class="reveal"><summary>Можно ли с детьми и питомцами?<i>+</i></summary><p>Можно с детьми любого возраста. Размещение с питомцами разрешено после предварительного согласования.</p></details>
+        <details class="reveal"><summary>Как забронировать дату?<i>+</i></summary><p>Позвоните по номеру бронирования или напишите в личные сообщения Instagram. Также доступна заявка через Kufar Путешествия.</p></details>
+        <details class="reveal"><summary>Какие условия оплаты?<i>+</i></summary><p>Аванс составляет 30%, остальная сумма оплачивается при заселении. Возвратный залог за имущество — 350 BYN.</p></details>
+      </div>
+    </section>
+
+    <section class="availability reveal" aria-labelledby="availability-title">
+      <div class="availability-copy">
+        <p class="eyebrow">Планирование отдыха</p>
+        <h2 id="availability-title">Свободные даты</h2>
+        <p>Выберите дату в форме ниже или уточните актуальную занятость у администратора.</p>
+      </div>
+      <div class="availability-cards">
+        <div><span>Сегодня</span><b>Можно уточнить</b></div>
+        <div><span>Ближайшие выходные</span><b>По запросу</b></div>
+        <div><span>Праздничные даты</span><b>Бронируются заранее</b></div>
+      </div>
+    </section>
+
+    <section class="contacts booking-section" id="contacts">
+      <div class="contact-copy booking-intro reveal">
+        <p class="eyebrow light">Онлайн-заявка</p>
+        <h2>Выберите дату.<br>Остальное мы<br>подготовим.</h2>
+        <p>Заполните параметры отдыха, получите предварительный расчёт и отправьте готовую заявку администратору.</p>
+
+        <div class="booking-progress" aria-live="polite">
+          <div><span>Заполнение заявки</span><b id="booking-progress-value">0%</b></div>
+          <i><span id="booking-progress-bar"></span></i>
+        </div>
+
+        <h3 class="booking-notes-title">Перед бронированием</h3>
+        <ul class="booking-notes">
+          <li>Бронирование подтверждается администратором.</li>
+          <li>Для фиксации даты вносится аванс 30%.</li>
+          <li>Возвратный залог за имущество — 350 BYN.</li>
+          <li>Размещение с питомцами возможно по согласованию.</li>
+          <li>Итоговая стоимость зависит от даты, количества гостей и выбранных услуг.</li>
+        </ul>
+
+        <div class="booking-contact">
+          <small>Нужна помощь?</small>
+          <a href="tel:+375296479387">+375 (29) 647-93-87</a>
+          <span>Минская обл., г. Борисов, ул. Южная, 12А</span>
+        </div>
+      </div>
+
+      <div class="booking-panel reveal">
+        <form class="booking-form" id="booking-form" novalidate>
+          <div class="booking-form-column">
+            <fieldset class="booking-step">
+              <legend><span>01</span> Даты проживания</legend>
+              <div class="booking-fields booking-fields-two">
+                <label>Дата заезда
+                  <input type="date" id="check-in" name="checkIn" required>
+                  <small class="field-error" data-error-for="check-in"></small>
+                </label>
+                <label>Дата выезда
+                  <input type="date" id="check-out" name="checkOut" required>
+                  <small class="field-error" data-error-for="check-out"></small>
+                </label>
+              </div>
+              <div class="stay-period" id="stay-period">Выберите даты заезда и выезда</div>
+            </fieldset>
+
+            <fieldset class="booking-step">
+              <legend><span>02</span> Количество гостей</legend>
+              <div class="guest-controls">
+                <div class="guest-row">
+                  <div><b>Взрослые</b><small>от 18 лет</small></div>
+                  <div class="counter">
+                    <button type="button" data-counter="adults" data-action="minus" aria-label="Уменьшить количество взрослых">−</button>
+                    <output id="adults-value">1</output>
+                    <button type="button" data-counter="adults" data-action="plus" aria-label="Увеличить количество взрослых">+</button>
+                  </div>
+                </div>
+                <div class="guest-row">
+                  <div><b>Дети</b><small>до 18 лет</small></div>
+                  <div class="counter">
+                    <button type="button" data-counter="children" data-action="minus" aria-label="Уменьшить количество детей">−</button>
+                    <output id="children-value">0</output>
+                    <button type="button" data-counter="children" data-action="plus" aria-label="Увеличить количество детей">+</button>
+                  </div>
+                </div>
+              </div>
+              <p class="guest-total">Всего гостей: <b id="guest-total">1</b></p>
+            </fieldset>
+
+            <fieldset class="booking-step">
+              <legend><span>03</span> Дополнительные услуги</legend>
+              <div class="service-options">
+                <label><input type="checkbox" name="services" value="Баня" data-price="0"><span>Баня</span><b>По запросу</b></label>
+                <label><input type="checkbox" name="services" value="Купель" data-price="0"><span>Купель</span><b>По запросу</b></label>
+                <label><input type="checkbox" name="services" value="Банкет" data-price="0"><span>Банкет</span><b>По запросу</b></label>
+                <label><input type="checkbox" name="services" value="Украшение помещения" data-price="0"><span>Украшение помещения</span><b>По запросу</b></label>
+                <label><input type="checkbox" name="services" value="Поздний выезд" data-price="0"><span>Поздний выезд</span><b>По запросу</b></label>
+                <label><input type="checkbox" name="services" value="Ранний заезд" data-price="0"><span>Ранний заезд</span><b>По запросу</b></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="booking-step">
+              <legend><span>04</span> Контактные данные</legend>
+              <div class="booking-fields booking-fields-two">
+                <label>Имя
+                  <input type="text" id="guest-name" name="name" autocomplete="name" placeholder="Как к вам обращаться" required>
+                  <small class="field-error" data-error-for="guest-name"></small>
+                </label>
+                <label>Телефон
+                  <input type="tel" id="guest-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="+375 (__) ___-__-__" required>
+                  <small class="field-error" data-error-for="guest-phone"></small>
+                </label>
+                <label>WhatsApp
+                  <input type="tel" id="guest-whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="+375 (__) ___-__-__">
+                </label>
+                <label>Telegram
+                  <input type="text" id="guest-telegram" name="telegram" placeholder="@username">
+                </label>
+                <label class="booking-field-wide">Комментарий к бронированию
+                  <textarea id="guest-comment" name="comment" rows="4" placeholder="Расскажите о формате отдыха или задайте вопрос"></textarea>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <aside class="booking-summary">
+            <p class="eyebrow">Предварительный расчёт</p>
+            <h3>Ваше бронирование</h3>
+            <dl>
+              <div><dt>Дата заезда</dt><dd id="summary-check-in">Не выбрана</dd></div>
+              <div><dt>Дата выезда</dt><dd id="summary-check-out">Не выбрана</dd></div>
+              <div><dt>Количество суток</dt><dd id="summary-nights">0</dd></div>
+              <div><dt>Количество гостей</dt><dd id="summary-guests">1</dd></div>
+              <div><dt>Выбранные услуги</dt><dd id="summary-services">Не выбраны</dd></div>
+            </dl>
+            <div class="booking-costs">
+              <p><span>Проживание</span><b id="summary-stay-cost">0 BYN</b></p>
+              <p><span>Дополнительные услуги</span><b id="summary-services-cost">0 BYN</b></p>
+              <p class="booking-total"><span>Итого</span><b id="summary-total">0 BYN</b></p>
+            </div>
+            <small class="booking-price-note">Расчёт предварительный. Итоговая стоимость подтверждается администратором.</small>
+
+            <div class="booking-submit-error" id="booking-submit-error" role="alert"></div>
+            <div class="booking-success" id="booking-success" role="status">Заявка подготовлена. Отправьте её администратору удобным способом.</div>
+
+            <div class="booking-actions">
+              <button class="button" type="submit">Забронировать</button>
+              <button class="booking-messenger whatsapp-button" id="send-whatsapp" type="button">Написать в WhatsApp</button>
+              <button class="booking-messenger telegram-button" id="send-telegram" type="button">Написать в Telegram</button>
+              <a class="booking-messenger phone-button" href="tel:+375296479387">Позвонить</a>
+            </div>
+          </aside>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#top"><img class="brand-logo" src="assets/logo-dom-na-yuzhnoy.png" alt="" width="56" height="56" loading="lazy"><span><b>Дом на Южной</b><small>Отдых, к которому возвращаются</small></span></a>
+    <p>Просторный дом в Борисове для семейного отдыха, встреч, праздников и мероприятий.</p>
+    <div><a href="https://www.instagram.com/dom_na_yuzhnoy/">Instagram</a><a href="https://www.tiktok.com/@dom_na_yuzhnoy?_r=1&_t=ZS-9752Wwkz9wi">TikTok</a><a href="https://travel.kufar.by/vi/borisov/1002525424">Kufar</a><a href="https://yandex.by/maps/org/dom_na_yuzhnoy/101450404971/">Яндекс Карты</a></div>
+    <small>© 2026 Дом на Южной. Все права защищены.</small>
+  </footer>
+
+  <div class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Просмотр фотографии">
+    <button class="lightbox-close" aria-label="Закрыть">×</button>
+    <button class="lightbox-arrow lightbox-prev" aria-label="Предыдущая фотография">←</button>
+    <img src="" alt="">
+    <button class="lightbox-arrow lightbox-next" aria-label="Следующая фотография">→</button>
+    <span class="lightbox-caption"></span>
+  </div>
+</body>
+</html>
